@@ -1,3 +1,3 @@
 [submodule "lit-loader"]
 	path = lit-loader
-	url = git@github.com:super-agent/lit-loader.git
+	url = https://github.com/super-agent/lit-loader.git
