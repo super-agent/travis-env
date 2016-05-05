@@ -1,0 +1,3 @@
+#!/bin/sh
+
+exec '/home/tim/.lenv/lua/5.2.4/bin/lua' -e 'package.path="/home/tim/.luarocks/share/lua/5.2/?.lua;/home/tim/.luarocks/share/lua/5.2/?/init.lua;/home/tim/.lenv/lua/5.2.4/share/lua/5.2/?.lua;/home/tim/.lenv/lua/5.2.4/share/lua/5.2/?/init.lua;"..package.path; package.cpath="/home/tim/.luarocks/lib/lua/5.2/?.so;/home/tim/.lenv/lua/5.2.4/lib/lua/5.2/?.so;"..package.cpath' -e 'local k,l,_=pcall(require,"luarocks.loader") _=k and l.add_context("luarocks","2.3.0-1")' '/home/tim/.lenv/lua/5.2.4/lib/luarocks/rocks/luarocks/2.3.0-1/bin/luarocks-admin' "$@"
