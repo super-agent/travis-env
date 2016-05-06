@@ -1,0 +1,11 @@
+rock_manifest = {
+   doc = {
+      ["CONTRIBUTING.md"] = "d7e3d1fb86d2ed6eb42263a15a1d99b0",
+      LICENSE = "d9a5847404deb8450a48ac0bf1332b60",
+      ["README.md"] = "ff1fee13774364d516c001faa0ca8700"
+   },
+   lib = {
+      ["ffi.so"] = "79b1c9530d227aa08c74d50498de9dc3"
+   },
+   ["luaffi-scm-1.rockspec"] = "3a8431b1a69a46cf8b44f73a950a8de0"
+}

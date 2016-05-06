@@ -1,0 +1,102 @@
+commands = {}
+dependencies = {
+   luabitop = {
+      ["1.0.2-3"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }, {
+                  op = "<",
+                  version = {
+                     5, 3, string = "5.3"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   luaffi = {
+      ["scm-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   luv = {
+      ["1.9.0-3"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   bit = {
+      "luabitop/1.0.2-3"
+   },
+   ffi = {
+      "luaffi/scm-1"
+   },
+   luv = {
+      "luv/1.9.0-3"
+   }
+}
+repository = {
+   luabitop = {
+      ["1.0.2-3"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               bit = "bit.so"
+            }
+         }
+      }
+   },
+   luaffi = {
+      ["scm-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ffi = "ffi.so"
+            }
+         }
+      }
+   },
+   luv = {
+      ["1.9.0-3"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               luv = "luv.so"
+            }
+         }
+      }
+   }
+}
