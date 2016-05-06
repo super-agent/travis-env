@@ -112,6 +112,8 @@ coroutine.wrap(function ()
     print("Installing luv...")
     exec(target .. "/bin/luarocks", "install", "luv")
     if not version:match("luajit") then
+      print("Installing luacov...")
+      exec(target .. "/bin/luarocks", "install", "luacov")
       if not version:match("5.3") then
         print("Installing bit...")
         exec(target .. "/bin/luarocks", "install", "luabitop")

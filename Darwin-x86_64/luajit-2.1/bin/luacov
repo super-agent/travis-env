@@ -1,0 +1,3 @@
+#!/bin/sh
+
+exec '/Users/tim8019/Code/msgpack/.travis/Darwin-x86_64/luajit-2.1/bin/lua' -e 'package.path="/Users/tim8019/.luarocks/share/lua/5.1/?.lua;/Users/tim8019/.luarocks/share/lua/5.1/?/init.lua;/Users/tim8019/Code/msgpack/.travis/Darwin-x86_64/luajit-2.1/share/lua/5.1/?.lua;/Users/tim8019/Code/msgpack/.travis/Darwin-x86_64/luajit-2.1/share/lua/5.1/?/init.lua;"..package.path; package.cpath="/Users/tim8019/.luarocks/lib/lua/5.1/?.so;/Users/tim8019/Code/msgpack/.travis/Darwin-x86_64/luajit-2.1/lib/lua/5.1/?.so;"..package.cpath' -e 'local k,l,_=pcall(require,"luarocks.loader") _=k and l.add_context("luacov","0.11.0-1")' '/Users/tim8019/Code/msgpack/.travis/Darwin-x86_64/luajit-2.1/lib/luarocks/rocks/luacov/0.11.0-1/bin/luacov' "$@"
