@@ -1,4 +1,8 @@
-commands = {}
+commands = {
+   luacov = {
+      "luacov/0.11.0-1"
+   }
+}
 dependencies = {
    luabitop = {
       ["1.0.2-3"] = {
@@ -13,6 +17,21 @@ dependencies = {
                   op = "<",
                   version = {
                      5, 3, string = "5.3"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   luacov = {
+      ["0.11.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
                   }
                }
             },
@@ -58,6 +77,27 @@ modules = {
    ffi = {
       "luaffi/scm-1"
    },
+   luacov = {
+      "luacov/0.11.0-1"
+   },
+   ["luacov.defaults"] = {
+      "luacov/0.11.0-1"
+   },
+   ["luacov.reporter"] = {
+      "luacov/0.11.0-1"
+   },
+   ["luacov.reporter.default"] = {
+      "luacov/0.11.0-1"
+   },
+   ["luacov.runner"] = {
+      "luacov/0.11.0-1"
+   },
+   ["luacov.stats"] = {
+      "luacov/0.11.0-1"
+   },
+   ["luacov.tick"] = {
+      "luacov/0.11.0-1"
+   },
    luv = {
       "luv/1.9.0-3"
    }
@@ -71,6 +111,26 @@ repository = {
             dependencies = {},
             modules = {
                bit = "bit.so"
+            }
+         }
+      }
+   },
+   luacov = {
+      ["0.11.0-1"] = {
+         {
+            arch = "installed",
+            commands = {
+               luacov = "luacov"
+            },
+            dependencies = {},
+            modules = {
+               luacov = "luacov.lua",
+               ["luacov.defaults"] = "luacov/defaults.lua",
+               ["luacov.reporter"] = "luacov/reporter.lua",
+               ["luacov.reporter.default"] = "luacov/reporter/default.lua",
+               ["luacov.runner"] = "luacov/runner.lua",
+               ["luacov.stats"] = "luacov/stats.lua",
+               ["luacov.tick"] = "luacov/tick.lua"
             }
          }
       }
